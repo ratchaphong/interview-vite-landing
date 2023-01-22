@@ -1,0 +1,154 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+}
+
+/* Section Top */
+.section-top {
+  background: url("https://i.ibb.co/PhVR2Vh/bg1.png");
+  min-height: 500px; /* Set a specific height */
+  background-attachment: fixed; /* Create the parallax scrolling effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-top .content {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 55%;
+  text-align: left;
+}
+
+.section-top h1 {
+  font-size: 72px;
+  transition: ease-in 0.5s;
+}
+
+.section-top .btn {
+  display: inline-block;
+  border: 0;
+  background: var(--secondary--color);
+  color: #fff;
+  border-radius: 24px;
+  padding: 8px 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.section-top .btn:hover {
+  transform: scale(0.98);
+}
+
+/* Section Stream */
+.section-stream {
+  min-height: 100vh;
+  background: url("https://i.ibb.co/bsX6RV0/bg2.png") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: ease-out 3s; /* turn off */
+}
+
+.section-stream.no-opacity {
+  opacity: 1;
+}
+
+.section-stream .play {
+  width: 25%;
+  position: absolute;
+  top: 10vh;
+  left: 50px;
+}
+
+.section-stream .content {
+  position: absolute;
+  width: 50%;
+  top: 12vh;
+  right: 70px;
+  overflow: hidden;
+}
+
+.section-stream .content .topic,
+.section-stream .grid .topic {
+  transform: translateX(100%);
+}
+
+.section-stream .content h2 {
+  font-size: 36px;
+}
+
+.section-stream .content > div,
+.grid > div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 36px;
+  border-radius: 8px;
+}
+
+/* Grid */
+.grid {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.grid p {
+  color: var(--text-color);
+}
+
+.grid .dot {
+  font-size: 40px;
+  padding-left: 2px;
+}
+
+.section-bottom {
+  background: url("./assets/rratcha.jpg");
+  min-height: 500px; /* Set a specific height */
+  background-attachment: fixed; /* Create the parallax scrolling effect */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.secondary-text {
+  color: var(--secondary--color);
+}
+
+/* .container {
+  max-height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.container .item {
+  border-bottom: 10px solid #fff;
+  color: #fff;
+  background: #f5c42f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 48px;
+  scroll-snap-align: center;
+} */
